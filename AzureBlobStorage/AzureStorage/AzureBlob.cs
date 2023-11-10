@@ -13,9 +13,10 @@ namespace AzureBlobStorage.AzureStorage
         private readonly string _connectionKey;
         private readonly string _container;
 
-        public AzureBlob()
+        public AzureBlob(string conectionKey, string container)
         {
-           
+           _connectionKey = conectionKey;
+            _container = container;
         }
 
         public async Task<Stream> DownloadBlob(string blobName)
